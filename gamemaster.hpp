@@ -19,8 +19,11 @@ protected:
     Textbox * tb;
     Board * br;
     bool _player = false;
+    std::vector<string> player_1;
+    std::vector<string> player_2;
 public:
     GameMaster(int XX, int YY);
+    void winning(std::vector<string>& currPlayer);
 };
 
 #endif // GAMEMASTER_HPP

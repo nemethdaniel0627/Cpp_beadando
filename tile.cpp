@@ -14,7 +14,7 @@ void Tile::draw(){
     gout << move_to(_x+((_size_x-gout.twidth(_content))/2),_y-gout.cdescent()/2);
     gout.load_font("LiberationSans-Regular.ttf", _fontSize);
     gout << color(255,255,255);
-    gout << text("G");
+    gout << text(_content);
     gout << color(0,0,0);
 }
 

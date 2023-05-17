@@ -22,12 +22,12 @@ string TextInput::getText() {
 
 void TextInput::handle(event ev)
 {
-    if (ev.keycode) {
+    if (ev.keycode) {        
         _content += ev.keyutf8;
     }
     if (ev.keycode == key_backspace) {
         if (!_content.empty()) {
-            _content = _content.substr(0,_content.size()-1);
+            _content = utf8_remove_last(_content);
         }
     }
     _focused = true;
